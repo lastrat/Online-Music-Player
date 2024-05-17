@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-//import com.bumptech.glide.Glide;
+import com.bumptech.glide.Glide;
 import com.example.onlinemusicapp.Model.Upload;
 import com.example.onlinemusicapp.R;
 import com.example.onlinemusicapp.SongsActivity;
@@ -47,7 +47,7 @@ public class RecyclerViewAdapter extends  RecyclerView.Adapter<RecyclerViewAdapt
         final Upload upload = uploads.get(position);
         holder.tv_book_title.setText(upload.getName());
 
-        //Glide.with(mContext).load(upload.getUrl()).into(holder.imd_book_thumnail);
+        Glide.with(mContext).load(upload.getUrl()).into(holder.imd_book_thumnail);
 
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
